@@ -18,3 +18,21 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
   * assets/js/app.js contains an import for each page file
   * lib/bikeshop_web/templates/layout/app.html.eex establishes the namespace when it requires js/app
   * calls are made via the namespace bikeshop.page.index.heartbeat()
+  ### adding page with JavaScript
+  
+  * create lib/bikeshop_web/templates/page/lorem.html.eex, add markup, add JavaScript call
+  ```javascript
+bikeshop.page.lorem.heartbeat()
+```
+  * create heartbeat function in assets/js/lorem.js
+  ```javascript  
+export const heartbeat = () => {console.log("heartbeat from lorem");};
+```
+  * add import to assets/js/app.js
+  ```javascript  
+import * as lorem from "./lorem"
+```
+  * update lib/bikeshop_web/templates/layout/app.html.eex require statement
+  ```javascript  
+var bikeshop = require("js/app");
+```
