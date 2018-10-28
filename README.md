@@ -17,7 +17,7 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
   * there is one file for every page
   * assets/js/app.js contains an import for each page file
   * lib/bikeshop_web/templates/layout/app.html.eex establishes the namespace when it requires js/app
-  * calls are made via the namespace bikeshop.page.index.heartbeat()
+  * calls are made via the namespace bikeshop.page.
   ### adding page with JavaScript
   
   * create lib/bikeshop_web/templates/page/lorem.html.eex, add markup, add JavaScript call
