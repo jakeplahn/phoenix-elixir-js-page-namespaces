@@ -28,9 +28,10 @@ bikeshop.page.lorem.heartbeat()
   ```javascript  
 export const heartbeat = () => {console.log("heartbeat from lorem");};
 ```
-  * add import to assets/js/app.js
+  * add import and update page in assets/js/app.js
   ```javascript  
 import * as lorem from "./lorem"
+export const page = {show: show, index: index, lorem: lorem}
 ```
   * update lib/bikeshop_web/templates/layout/app.html.eex require statement
   ```javascript  
