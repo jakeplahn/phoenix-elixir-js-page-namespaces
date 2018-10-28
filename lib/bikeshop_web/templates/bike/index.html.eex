@@ -1,0 +1,36 @@
+<h2>Listing Bikes</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Frameset</th>
+      <th>Geometry</th>
+      <th>Purpose</th>
+      <th>Components</th>
+      <th>Features</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for bike <- @bikes do %>
+    <tr>
+      <td><%= bike.name %></td>
+      <td><%= bike.frameset %></td>
+      <td><%= bike.geometry %></td>
+      <td><%= bike.purpose %></td>
+      <td><%= bike.components %></td>
+      <td><%= bike.features %></td>
+
+      <td class="text-right">
+        <span><%= link "Show", to: bike_path(@conn, :show, bike), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Edit", to: bike_path(@conn, :edit, bike), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Delete", to: bike_path(@conn, :delete, bike), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Bike", to: bike_path(@conn, :new) %></span>

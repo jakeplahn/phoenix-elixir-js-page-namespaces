@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <td>name</td>
+    <td>frameset</td>
+    <td>geometry</td>
+    <td>purpose</td>
+    <td>components</td>
+    <td>features</td>
+  </tr>
+  <tr>
+    <td><a href="" onclick="return bikeshop.page.show.changeColor();"><%= @bike.name %></a></td>
+    <td><%= @bike.frameset%></td>
+    <td><%= @bike.geometry%></td>
+    <td><%= @bike.purpose%></td>
+    <td><%= @bike.components%></td>
+    <td><%= @bike.features%></td>
+  </tr>
+</table>

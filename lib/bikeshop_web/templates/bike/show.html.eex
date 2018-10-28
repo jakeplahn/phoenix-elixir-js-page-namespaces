@@ -1,0 +1,38 @@
+<h2>Show Bike</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @bike.name %>
+  </li>
+
+  <li>
+    <strong>Frameset:</strong>
+    <%= @bike.frameset %>
+  </li>
+
+  <li>
+    <strong>Geometry:</strong>
+    <%= @bike.geometry %>
+  </li>
+
+  <li>
+    <strong>Purpose:</strong>
+    <%= @bike.purpose %>
+  </li>
+
+  <li>
+    <strong>Components:</strong>
+    <%= @bike.components %>
+  </li>
+
+  <li>
+    <strong>Features:</strong>
+    <%= @bike.features %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: bike_path(@conn, :edit, @bike) %></span>
+<span><%= link "Back", to: bike_path(@conn, :index) %></span>
