@@ -9,6 +9,8 @@
 
     <title>Hello BikeShop!</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+    <script>var bikeshop = require("js/app");</script>
   </head>
 
   <body>
@@ -30,7 +32,5 @@
       </main>
 
     </div> <!-- /container -->
-    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
-    <script>var bikeshop = require("js/app");</script>
   </body>
 </html>
