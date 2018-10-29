@@ -29,6 +29,9 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 1. create heartbeat function in assets/js/lorem.js
 
+    ```bash
+    vi assets/js/lorem.js
+    ```
     ```javascript  
     export const heartbeat = () => {console.log("heartbeat from lorem");};
     ```
