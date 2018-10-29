@@ -47,6 +47,10 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
     ```
 
 1. update lib/bikeshop_web/templates/layout/app.html.eex require statement
+    
+    ```bash
+    lib/bikeshop_web/templates/layout/app.html.eex
+    ```
     ```javascript  
     var bikeshop = require("js/app");
     ```
