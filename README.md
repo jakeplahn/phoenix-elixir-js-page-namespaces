@@ -11,7 +11,7 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 ## JavaScript structure
 
-  * page specific functionality is stored in individual files located in assets/js/
+  * page specific functionality is stored in individual files located in assets/js/pages/
   * there is one file for every page
   * assets/js/app.js contains an import for each page file
   * lib/bikeshop_web/templates/layout/app.html.eex establishes the namespace when it requires js/app
@@ -30,7 +30,7 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 1. create heartbeat function in page script file
 
     ```bash
-    vi assets/js/lorem.js
+    vi assets/js/pages/lorem.js
     ```
     ```javascript  
     export const heartbeat = () => {console.log("heartbeat from lorem");};
@@ -42,7 +42,7 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
     vi assets/js/app.js
     ```
     ```javascript  
-    import * as lorem from "./lorem"
+    import * as lorem from "./pages/lorem"
     export const page = {show: show, index: index, lorem: lorem}
     ```
 
