@@ -19,7 +19,7 @@ import "phoenix_html"
 // paths "./socket" or full ones "web/static/js/socket".
 
 // import socket from "./socket"
-import * as show from "./show"
-import * as index from "./index"
+import * as show from "./pages/show"
+import * as index from "./pages/index"
 
 export const page = {show: show, index: index}
