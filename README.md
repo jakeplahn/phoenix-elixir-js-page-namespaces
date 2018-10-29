@@ -27,7 +27,7 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
     <script>bikeshop.page.lorem.heartbeat();</script>
     ```
 
-1. create heartbeat function in assets/js/lorem.js
+1. create heartbeat function in page script file
 
     ```bash
     vi assets/js/lorem.js
@@ -36,21 +36,41 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
     export const heartbeat = () => {console.log("heartbeat from lorem");};
     ```
 
-1. add import and update page in assets/js/app.js
+1. add import and update page in app script file
 
     ```bash
-    assets/js/app.js
+    vi assets/js/app.js
     ```
     ```javascript  
     import * as lorem from "./lorem"
     export const page = {show: show, index: index, lorem: lorem}
     ```
 
-1. update lib/bikeshop_web/templates/layout/app.html.eex require statement
+1. update app template require statement
     
     ```bash
-    lib/bikeshop_web/templates/layout/app.html.eex
+    vi lib/bikeshop_web/templates/layout/app.html.eex
     ```
     ```javascript  
     var bikeshop = require("js/app");
     ```
+    
+1. add route to "/" scope
+    
+    ```bash
+    vi lib/bikeshop_web/router.ex
+    ```
+    ```javascript  
+    get "/lorem", PageController, :lorem
+    ```
+    
+1. add method to controller
+    
+    ```bash
+    vi lib/bikeshop_web/controllers/page_controller.ex
+    ```
+    ```elixir  
+    def lorem(conn, _params) do
+      render(conn, "lorem.html")
+    end
+    ```    
