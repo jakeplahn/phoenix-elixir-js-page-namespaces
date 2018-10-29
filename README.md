@@ -20,27 +20,27 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
   
 1. create page template with JavaScript call
   
-```bash
-vi lib/bikeshop_web/templates/page/lorem.html.eex
-```
-```html
-<script>bikeshop.page.lorem.heartbeat();</script>
-```
+    ```bash
+    vi lib/bikeshop_web/templates/page/lorem.html.eex
+    ```
+    ```html
+    <script>bikeshop.page.lorem.heartbeat();</script>
+    ```
 
 1. create heartbeat function in assets/js/lorem.js
 
-```javascript  
-export const heartbeat = () => {console.log("heartbeat from lorem");};
-```
+    ```javascript  
+    export const heartbeat = () => {console.log("heartbeat from lorem");};
+    ```
 
 1. add import and update page in assets/js/app.js
 
-```javascript  
-import * as lorem from "./lorem"
-export const page = {show: show, index: index, lorem: lorem}
-```
+    ```javascript  
+    import * as lorem from "./lorem"
+    export const page = {show: show, index: index, lorem: lorem}
+    ```
 
 1. update lib/bikeshop_web/templates/layout/app.html.eex require statement
-```javascript  
-var bikeshop = require("js/app");
-```
+    ```javascript  
+    var bikeshop = require("js/app");
+    ```
