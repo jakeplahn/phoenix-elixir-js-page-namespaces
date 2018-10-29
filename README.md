@@ -19,9 +19,11 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
   ### adding page with JavaScript
   
   * create lib/bikeshop_web/templates/page/lorem.html.eex, add markup, add JavaScript call
-  `vi lib/bikeshop_web/templates/page/lorem.html.eex`
-  ```javascript
-bikeshop.page.lorem.heartbeat()
+  ```bash
+  vi lib/bikeshop_web/templates/page/lorem.html.eex
+  ```
+  ```html
+<script>bikeshop.page.lorem.heartbeat();</script>
 ```
   * create heartbeat function in assets/js/lorem.js
   ```javascript  
