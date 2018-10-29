@@ -1,4 +1,4 @@
-# BikeShop
+# Phoenix/Elixir page specific JavaScript structure
 
 To start your Phoenix server:
 
