@@ -38,6 +38,9 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 1. add import and update page in assets/js/app.js
 
+    ```bash
+    assets/js/app.js
+    ```
     ```javascript  
     import * as lorem from "./lorem"
     export const page = {show: show, index: index, lorem: lorem}
